@@ -1,3 +1,5 @@
-<% @categories.each do |category| %>
-  <%= @category.title %>
-<% end %>
+<h1>Categoris</h1>
+
+<div class="container" id="list_categories">
+	<%= render :partial => 'index_categories', :locals => {:categories => @categories}%>
+</div>

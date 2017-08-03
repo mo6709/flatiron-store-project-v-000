@@ -1,7 +1,4 @@
-<% @categories.each do |category| %>
-  <%= link_to category.title, category_path(category) %>
-<% end %>
+<h1>Welcome to Flatiron Store</h1>
 
-<% @items.each do |item| %>
-  <p><%= item.title %> | <%= number_to_currency(item.price) %> | <%= button_to 'Add to Cart', line_items_path(item_id: item) %></p>
-<% end %>
+<%= render :partial => 'categories/index_categories', :locals => {:categories => @categories} %>
+<%= render :partial => 'items/index_items', :locals => {:items => @items} %>
